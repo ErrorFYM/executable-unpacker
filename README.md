@@ -8,7 +8,7 @@ Will be especially useful for people, who use linux and can create .tar.xz archi
 
 You need `python3` and `python3-venv` for this project to work.
 
-#### On linux (Debain-like)
+#### On linux (Debian-like)
 
 ```shell
 sudo apt install python3 python3-venv
@@ -17,7 +17,7 @@ sudo apt install python3 python3-venv
 #### On windows
 
 Go to [Python website](https://www.python.org/) and download latest version for windows.
-When downloaded open it and install in default directory. Also make sure to check **[X] Add to PATH**.
+When downloaded open it and install to the default directory. Also make sure to check **[X] Add to PATH**.
 
 ## Usage
 
