@@ -28,6 +28,10 @@ config.set_messages()  # setting messages with up to date information
 
 with tarfile.open(get_resource_path(archive_path), 'r') as file:
     print("\r" + config.msg_extracting_to, end="", flush=True)
-    file.extractall(config.unpack_path)
-    print("\r" + config.msg_extracted_successfully 
+    try:
+        file.extractall(config.unpack_path)
+    except NotADirectoryError:
+        print(f"\n\x1b[0;31;40mError! File with name of the folder in archive already exists! Rename the file in {config.unpack_path} that could cause the issue!")
+        sys.exit()
+    print("\r" + config.msg_extracted_successfully
           + " " * (len(config.msg_extracting_to_pure) - len(config.msg_extracted_successfully_pure)))  # rewrite previus message with spaces
