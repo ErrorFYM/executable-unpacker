@@ -13,7 +13,7 @@ unpack_path = default_unpack_path
 # Messages
 def set_messages():  # setting messages with up to date information (will be called in main.py when ready)
     global msg_path_input, msg_extracting_to, msg_extracted_successfully
-    msg_path_input = "Enter target path(leave empty for default): "
+    msg_path_input = f"Enter target path(leave empty for {default_unpack_path} ): "
 
     global msg_extracting_to_pure, msg_extracting_to_color
     msg_extracting_to_pure = f"Extracting to {unpack_path}…"
