@@ -23,12 +23,18 @@ def set_messages():  # setting messages with up to date information (will be cal
     msg_extracted_successfully_pure = "Successfully extracted."
     msg_extracted_successfully_color = "\x1b[0;32;40m"
 
+    global msg_NotADirectoryError, msg_NotADirectoryError_pure, msg_NotADirectoryError_color
+    msg_NotADirectoryError_pure = f"Error! File with name of the folder in archive already exists! Rename the file in {unpack_path} that could cause the issue!"
+    msg_NotADirectoryError_color = "\x1b[0;31;40m"
+
 
     if colored_terminal:
         msg_extracting_to = msg_extracting_to_color + msg_extracting_to_pure + restart_colors
         msg_extracted_successfully = msg_extracted_successfully_color + msg_extracted_successfully_pure + restart_colors
+        msg_NotADirectoryError = msg_NotADirectoryError_color + msg_NotADirectoryError_pure + restart_colors
     else:
         msg_extracting_to = msg_extracting_to_pure
         msg_extracted_successfully = msg_extracted_successfully_pure
+        msg_NotADirectoryError = msg_NotADirectoryError_pure
 
 
